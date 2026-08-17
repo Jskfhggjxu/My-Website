@@ -1,1 +1,1 @@
-wait, why do you check here? just AI slop
+welcome you check my website repo huh?
