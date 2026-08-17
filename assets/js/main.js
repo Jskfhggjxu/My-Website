@@ -1,4 +1,3 @@
-
 "use strict";
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -188,7 +187,6 @@ async function init() {
     return;
   }
 
-  // scripts page
   const grid = $("#scriptsGrid");
   if (grid) {
     renderChips($("#chips"));
@@ -203,14 +201,12 @@ async function init() {
     }
   }
 
-  // home page featured
   const featured = $("#featuredGrid");
   if (featured) {
     featured.innerHTML = DATA.scripts.filter((s) => s.featured).map(cardHTML).join("");
     bindCardEvents(featured);
   }
 
-  // owner info
   if (DATA.owner) {
     const bio = $("#bioText");
     if (bio) bio.textContent = DATA.owner.bio;
