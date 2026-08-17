@@ -69,25 +69,25 @@ function cardHTML(s) {
       <span>🕒 ${escapeHTML(s.updated)}</span>
     </div>
     <div class="card-actions">
-      <button class="btn btn-ghost btn-sm" data-copy="${escapeHTML(s.download)}">复制链接</button>
-      <a class="btn btn-primary btn-sm" href="${escapeHTML(s.download)}" target="_blank" rel="noopener">获取脚本 ↗</a>
+      <button class="btn btn-ghost btn-sm" data-copy="${escapeHTML(s.download)}">Copy link</button>
+      <a class="btn btn-primary btn-sm" href="${escapeHTML(s.download)}" target="_blank" rel="noopener">Get script ↗</a>
     </div>
   </article>`;
 }
 
 /* ---------- state ---------- */
 let DATA = null;
-let activeCategory = "全部";
+let activeCategory = "All";
 let searchQuery = "";
 
 function categories() {
   const set = new Set(DATA.scripts.map((s) => s.category));
-  return ["全部", ...set];
+  return ["All", ...set];
 }
 
 function filtered() {
   return DATA.scripts.filter((s) => {
-    const okCat = activeCategory === "全部" || s.category === activeCategory;
+    const okCat = activeCategory === "All" || s.category === activeCategory;
     const q = searchQuery.trim().toLowerCase();
     const okQ =
       !q ||
@@ -130,8 +130,8 @@ function bindCardEvents(root) {
   $$("[data-copy]", root).forEach((btn) =>
     btn.addEventListener("click", () => {
       copyText(btn.dataset.copy)
-        .then(() => showToast("链接已复制，去执行器里粘贴吧！"))
-        .catch(() => showToast("复制失败，请手动复制链接"));
+        .then(() => showToast("Link copied — paste it into your executor!"))
+        .catch(() => showToast("Copy failed — please copy the link manually"));
     })
   );
 }
@@ -165,15 +165,15 @@ function renderStats() {
   el.innerHTML = `
     <div class="reveal visible">
       <div class="num">${DATA.scripts.length}<em>+</em></div>
-      <div class="lbl">公开脚本</div>
+      <div class="lbl">Scripts</div>
     </div>
     <div class="reveal visible">
       <div class="num">${cats}<em>+</em></div>
-      <div class="lbl">脚本分类</div>
+      <div class="lbl">Categories</div>
     </div>
     <div class="reveal visible">
       <div class="num">${escapeHTML(updated)}</div>
-      <div class="lbl">最近更新</div>
+      <div class="lbl">Latest update</div>
     </div>`;
 }
 
@@ -189,8 +189,8 @@ async function init() {
       fallback.innerHTML = `
         <div class="empty-state" style="display:block;grid-column:1/-1">
           <div class="big">⚠️</div>
-          <p>无法加载 <span class="mono">data/scripts.json</span>。</p>
-          <p style="margin-top:8px;font-size:13px">请用本地服务器预览：<code>python3 -m http.server</code></p>
+          <p>Couldn't load <span class="mono">data/scripts.json</span>.</p>
+          <p style="margin-top:8px;font-size:13px">Preview with a local server: <code>python3 -m http.server</code></p>
         </div>`;
     }
     console.warn("Failed to load scripts.json:", err);
