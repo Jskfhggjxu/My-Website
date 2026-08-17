@@ -1,7 +1,4 @@
-/* ============================================================
-   Tory Script Hub — main.js
-   Loads data/scripts.json and renders everything.
-   ============================================================ */
+
 "use strict";
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -50,7 +47,6 @@ function showToast(msg) {
   toast._t = setTimeout(() => toast.classList.remove("show"), 2400);
 }
 
-/* ---------- card factory ---------- */
 function cardHTML(s) {
   const tags = s.tags.map((t) => `<span>#${escapeHTML(t)}</span>`).join("");
   const featured = s.featured ? `<div class="featured-flag">FEATURED</div>` : "";
@@ -75,7 +71,6 @@ function cardHTML(s) {
   </article>`;
 }
 
-/* ---------- state ---------- */
 let DATA = null;
 let activeCategory = "All";
 let searchQuery = "";
@@ -99,7 +94,6 @@ function filtered() {
   });
 }
 
-/* ---------- renderers ---------- */
 function renderScripts(target) {
   const list = filtered();
   target.innerHTML = list.map(cardHTML).join("");
@@ -136,7 +130,6 @@ function bindCardEvents(root) {
   );
 }
 
-/* ---------- reveal on scroll ---------- */
 function observeReveals() {
   const io = new IntersectionObserver(
     (entries) => {
@@ -152,7 +145,6 @@ function observeReveals() {
   $$(".reveal:not(.visible)").forEach((el) => io.observe(el));
 }
 
-/* ---------- stats ---------- */
 function renderStats() {
   const cats = categories().length - 1;
   const el = $("#statsTarget");
@@ -177,7 +169,6 @@ function renderStats() {
     </div>`;
 }
 
-/* ---------- init ---------- */
 async function init() {
   try {
     const res = await fetch("data/scripts.json", { cache: "no-store" });
