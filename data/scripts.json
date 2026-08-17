@@ -1,0 +1,69 @@
+{
+  "owner": {
+    "name": "Tory",
+    "bio": "Im a scripter or not, i like modifying scripts, and research networkownership abuse.",
+    "discord": "https://discord.gg/kMuXv6PuXp"
+  },
+  "scripts": [
+    {
+      "id": "universal-ui-library",
+      "title": "Universal UI Library",
+      "description": "A lightweight, modern UI library for Roblox scripts. Draggable windows, themes and a smooth tween animation system — runs on every executor.",
+      "category": "Library",
+      "tags": ["ui", "library", "tween", "customizable"],
+      "version": "2.1.0",
+      "updated": "2026-08-01",
+      "download": "https://raw.githubusercontent.com/Jskfhggjxu/My-Website/main/scripts/universal-ui-library.lua",
+      "size": "18.4 KB",
+      "featured": true
+    },
+    {
+      "id": "network-ownership-lab",
+      "title": "Network Ownership Lab",
+      "description": "A research playground for networkownership abuse: claim ownership, observe transfer logic and test the limits of the physics replication system.",
+      "category": "Research",
+      "tags": ["network-ownership", "research", "physics", "exploit"],
+      "version": "1.3.2",
+      "updated": "2026-08-10",
+      "download": "https://raw.githubusercontent.com/Jskfhggjxu/My-Website/main/scripts/network-ownership-lab.lua",
+      "size": "9.7 KB",
+      "featured": true
+    },
+    {
+      "id": "anti-afk",
+      "title": "Anti-AFK",
+      "description": "Simple and reliable anti-AFK that simulates input at configurable intervals. Tiny, no dependencies, paste & go.",
+      "category": "Utility",
+      "tags": ["afk", "utility", "input"],
+      "version": "1.0.0",
+      "updated": "2026-07-20",
+      "download": "https://raw.githubusercontent.com/Jskfhggjxu/My-Website/main/scripts/anti-afk.lua",
+      "size": "1.2 KB",
+      "featured": false
+    },
+    {
+      "id": "speed-farm-hub",
+      "title": "Speed Farm Hub",
+      "description": "A farming hub with teleport waypoints, auto-click toggles and per-game config presets. Built on top of my UI library.",
+      "category": "Game",
+      "tags": ["farm", "hub", "teleport", "automation"],
+      "version": "0.9.5",
+      "updated": "2026-08-05",
+      "download": "https://raw.githubusercontent.com/Jskfhggjxu/My-Website/main/scripts/speed-farm-hub.lua",
+      "size": "27.9 KB",
+      "featured": false
+    },
+    {
+      "id": "instance-spawner",
+      "title": "Instance Spawner",
+      "description": "A GUI tool for spawning, cloning and inspecting Instances at runtime. Great for testing and script debugging.",
+      "category": "Tool",
+      "tags": ["instance", "debug", "tool", "gui"],
+      "version": "2.0.1",
+      "updated": "2026-06-15",
+      "download": "https://raw.githubusercontent.com/Jskfhggjxu/My-Website/main/scripts/instance-spawner.lua",
+      "size": "12.3 KB",
+      "featured": false
+    }
+  ]
+}
