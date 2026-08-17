@@ -49,6 +49,10 @@ function showToast(msg) {
 function cardHTML(s) {
   const tags = s.tags.map((t) => `<span>#${escapeHTML(t)}</span>`).join("");
   const featured = s.featured ? `<div class="featured-flag">FEATURED</div>` : "";
+  const meta = [
+    s.size ? `<span>📦 ${escapeHTML(s.size)}</span>` : "",
+    s.updated ? `<span>🕒 ${escapeHTML(s.updated)}</span>` : ""
+  ].filter(Boolean).join("");
   return `
   <article class="card reveal" data-id="${escapeHTML(s.id)}">
     ${featured}
@@ -59,13 +63,9 @@ function cardHTML(s) {
     <h3>${escapeHTML(s.title)}</h3>
     <p class="desc">${escapeHTML(s.description)}</p>
     <div class="tags">${tags}</div>
-    <div class="meta">
-      <span>📦 ${escapeHTML(s.size || "?")}</span>
-      <span>🕒 ${escapeHTML(s.updated)}</span>
-    </div>
+    ${meta ? `<div class="meta">${meta}</div>` : ""}
     <div class="card-actions">
-      <button class="btn btn-ghost btn-sm" data-copy="${escapeHTML(s.download)}">Copy link</button>
-      <a class="btn btn-primary btn-sm" href="${escapeHTML(s.download)}" target="_blank" rel="noopener">Get script ↗</a>
+      <button class="btn btn-primary btn-sm" data-copy="${escapeHTML(s.download)}">Copy loadstring</button>
     </div>
   </article>`;
 }
@@ -123,7 +123,7 @@ function bindCardEvents(root) {
   $$("[data-copy]", root).forEach((btn) =>
     btn.addEventListener("click", () => {
       copyText(btn.dataset.copy)
-        .then(() => showToast("Link copied — paste it into your executor!"))
+        .then(() => showToast("Loadstring copied — paste it into your executor!"))
         .catch(() => showToast("Copy failed — please copy the link manually"));
     })
   );

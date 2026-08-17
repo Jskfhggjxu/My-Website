@@ -531,7 +531,7 @@ body {
 .toast {
   position: fixed;
   bottom: 28px; left: 50%;
-  transform: translate(-50%, 90px);
+  transform: translate(-50%, calc(100% + 40px));
   background: #101c33;
   border: 1px solid rgba(74, 222, 128, 0.4);
   color: #d1fae5;
