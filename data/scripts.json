@@ -99,7 +99,7 @@
       "updated": "2026-07-15",
       "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Fe%20server%20admin.lua\"))()",
       "size": "137.9KB",
-      "featured": true
+      "featured": false
     },
     {
       "id": "9",
@@ -135,7 +135,7 @@
       "updated": "2026-08-15",
       "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Fe%20Forsaken%20Jason%20-%20Limb%20Reanimation%20v2.lua\"))()",
       "size": "46.02KB",
-      "featured": true
+      "featured": false
     },
     {
       "id": "12",
@@ -147,7 +147,7 @@
       "updated": "2026-08-15",
       "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Neptunian%20Tory%20remake%20(5).lua\"))()",
       "size": "476.72KB",
-      "featured": true
+      "featured": false
     },
     {
       "id": "13",
@@ -159,6 +159,18 @@
       "updated": "2026-08-17",
       "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/ServerHacker-X.lua\"))()",
       "size": "153.28KB",
+      "featured": true
+    },
+    {
+      "id": "14",
+      "title": "Fe Forsaken Admin Noli",
+      "description": "Admin Noli by melonscripter/Modded by Tory",
+      "category": "FE Script",
+      "tags": [],
+      "version": "Modded",
+      "updated": "2026-08-19",
+      "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Admin%20Noli%20-%20Limb%20Reanimation.lua\"))()",
+      "size": "67.35KB",
       "featured": true
     }
   ]
