@@ -55,14 +55,14 @@
     },
     {
       "id": "5",
-      "title": "Neptunian Skidded Tory remake",
-      "description": "Neptunian by NoobyGames12/Modded by Tory",
-      "category": "FE Script",
+      "title": "asterazuke glitcher",
+      "description": "asterazuke glitcher by idk/simple change hat align by Tory",
+      "category": "glitcher",
       "tags": [],
       "version": "1.0.0",
-      "updated": "2026-06-26",
-      "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Neptunian%20Tory%20remake%20(1).lua\"))()",
-      "size": "480KB",
+      "updated": "2026-09-05",
+      "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/asterazuke%20glitcher.lua\"))()",
+      "size": "157.74KB",
       "featured": false
     },
     {
