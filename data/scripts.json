@@ -172,6 +172,18 @@
       "download": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Admin%20Noli%20-%20Limb%20Reanimation.lua\"))()",
       "size": "67.35KB",
       "featured": true
+    },
+    {
+      "id": "15",
+      "title": "Ban Hammer",
+      "description": "Ban Hammer modded by exotic modded more by Tory",
+      "category": "FE Script",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-10-13",
+      "download": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/ban_hammer.lua'))()",
+      "size": "473.77KB",
+      "featured": false
     }
   ]
 }
